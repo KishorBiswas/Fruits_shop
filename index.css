@@ -1,0 +1,1574 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width:8px;
+}
+::-webkit-scrollbar-track{ 
+    background-color: transparent;
+    box-shadow: inset 0 0 4px #615f5f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(35deg, #f7d518,rgb(13, 218, 24));
+    border-radius: 10px;
+    
+}
+.container{
+    width:100%;
+    height: 100vh;
+    overflow: hidden auto;
+    position: relative;
+}
+
+.top_header{
+    display: none;
+}
+
+
+/* Nav Bar is start here */
+.menu_Bar{
+    width:80%;
+    height: 10vh;
+    background-color: #252525;
+    border-radius: 5px;
+    position: absolute;
+    top: 35vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 8px;
+    transition: box-shadow 0.3s;
+    z-index: 100;
+}
+
+.menu_Bar:hover{
+    box-shadow: 2px 3px 5px #ccc, -2px -3px 8px #ccc, 0 0 12px #dbdbdb;
+}
+
+.menu_Bar p{
+    display: none;
+}
+
+.menu_Bar ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+.menu_Bar ul li{
+    list-style: none;
+    line-height: 10vh;
+    position: relative;
+}
+
+.menu_Bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    letter-spacing: 0.8px;
+    font-size:16px;
+    transition: all 0.3s;
+}
+
+.menu_Bar ul li a:hover{
+    color:magenta;
+}
+
+
+.menu_Bar ul li a.active{
+    color:rgb(0, 255, 42);
+    font-size: 17px;
+}
+
+.menu_Bar ul li .search_Box{
+    width: 160px;
+    height: 26px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    text-align: left;
+    overflow-x: auto;
+    font-size: 15px;
+    margin-right: 9px;
+    text-transform: capitalize;
+    transition: all 0.5s;
+}
+
+/* Hide the search box initiali */
+.hide{
+    display: none;
+}
+
+.menu_Bar ul li .close_search{
+    width: 22px;
+    height: 26px;
+    position: absolute;
+    top: calc(50% - 13px);
+    left:calc(160px - 16px);
+    border-radius: 0 5px 5px 0;
+    background-color: #7837e0;
+    border-left: 2px solid #06e624;
+    padding-left: 6px;
+   
+}
+
+.menu_Bar ul li .close_search i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(0, 255, 42);
+    cursor: pointer;
+}
+/* Nav Bar is end here */
+
+
+
+
+/* Banner is start here */
+.banner{
+    width:100%;
+    height: 40vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .swiper{
+    width: 100%;
+    height: 100%;
+}
+
+.banner .swiper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: saturate(2) contrast(1);
+    border-radius: 0 0 5px 5px;
+    z-index: -100;
+}
+
+
+.arrow{
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #000;
+    border: 1px solid transparent;
+    border-radius: 0 48% 48% 0;
+    padding: 16px 0 0 15px;
+    z-index: 2;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.arrow:hover{
+    background-color: #faf7f78a;
+   
+}
+
+.arrow:hover.swiper-button-next:after, 
+.arrow:hover.swiper-button-prev:after{
+    color: rgb(22, 255, 1);
+}
+
+.mySwiper .swiper-button-next, .mySwiper .swiper-button-prev {
+    position: absolute;
+    top: 50% !important;
+    transform: translateY(-50%);
+    margin-top: 0 !important;
+}
+ .mySwiper .swiper-button-next{
+    border-radius: 48% 0 0 48%;
+    right: 0px !important;
+    padding-right: 5px;
+}
+
+.mySwiper .swiper-button-prev{
+    left: 0px !important;
+    padding-right: 15px;
+    margin-top: -12px !important;
+} 
+
+.mySwiper .swiper-button-next:after, .mySwiper .swiper-button-prev:after {
+    font-size: 20px !important;
+    font-weight: 600;
+    color: #fff ;
+    position: absolute;
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+
+
+
+/* Banner is End here */
+
+
+
+
+
+
+
+/* Frutis is stsrt here */
+
+.fruits_point{
+    width: 500px;
+    height: 500px;
+    margin: 10vh auto 10px;
+    padding: 15px;
+    text-align: center;
+    line-height: 30px;
+    
+}
+
+
+.fruits_point h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+
+.img_Box{
+    width: 350px;
+    height: 300px;
+    /* border: 1px solid #000; */
+    margin: 30px auto;
+}
+
+.img_Box img{
+    width: 100%;
+    height: 100%;
+    filter: saturate(1.02);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.img_Box img:hover{
+    transform: scale(1.05);
+}
+
+
+.fruits_point button{
+    width:170px;
+    height: 45px;
+    background-color: #313131;
+    border: none;
+    color:#fff;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.fruits_point button:hover{
+    background-color: #fff;
+    color: #313131;
+    border: 2px solid rgb(79, 79, 252);
+    font-size: 16px;
+    font-weight: 700;
+    text-shadow: 0 0 4px rgb(131, 233, 233), 0 0 6px rgb(131, 233, 233), 0 0 8px rgb(131, 233, 233);
+}
+
+
+/* Frutis is end here */
+
+
+
+/* About section start here */
+
+.about_Fruits_Shop{
+    width:95%;
+    height: 500px;
+    margin: 75px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_img{
+    width: 58%;
+    height: 100%;
+    /* border: 1px solid #000; */
+    border-radius: 3px;
+    background-color: #cccccc7c;
+    position: relative;
+}
+
+.about_img img{
+    width: 100%;
+    height: 94%;
+    border-radius: 3px;
+    position: absolute;
+    top: 3%;
+    right:-4%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.about_img img:hover{
+    transform: scale(1.01);
+    box-shadow: 2px 4px 5px #ccc;
+}
+
+
+.about_details{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8%;
+    padding: 15px 10px 0;
+    line-height: 22px;
+    text-align: center;
+}
+
+.about_details h2{
+    margin-bottom: 15px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    position: relative;
+}
+
+.about_details h2::before{
+    content: "";
+    width: 135px;
+    height: 1.5px;
+    background-color: #ccccccb6;
+    border-radius: 5px;
+    transform: rotate(90deg);
+    position: absolute;
+    top:-80px;
+    left: 28%;
+
+}
+.about_details p{
+   margin-bottom: 26px;
+   letter-spacing: 0.10px;
+   font-size: 15px;
+   color: #333232;
+}
+
+.about_details button{
+    width: 130px;
+    height: 38px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    color:#fff;
+    background-color: #313131;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.about_details button:hover{
+    background-color: #fff;
+    color: #313131;
+    text-shadow: 0 0 4px rgb(131, 233, 233), 0 0 6px rgb(131, 233, 233), 0 0 8px rgb(131, 233, 233);
+    border: 2px solid magenta;
+    font-size: 14.5px;
+}
+
+/* About section end here */
+
+
+
+
+/* Fresh Fruit section is start here */
+
+.fresh_fruit{
+    width:96%;
+    height: auto;
+    /* border: 1px solid #000; */
+    margin: 50px auto;
+    
+}
+
+.fresh_fruit h2{
+    width: 100%;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: 'Roboto Slab', serif;
+    margin: 25px 350px;
+    letter-spacing: 0.8px;
+    position: relative;
+}
+
+.fresh_fruit h2::before{
+    content: "";
+    width: 250px;
+    height: 2px;
+    background-color: #ccccccb6;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: -266px;
+}
+
+.img_Conteiner{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 380px 380px;
+    grid-gap: 25px 25px;
+   
+    
+}
+.small_img{
+    /* border: 1px solid #000; */
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.small_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.small_img .overlay{
+    width: 100%;
+    height: 0;
+    background-color: #33323285;
+    border-radius: 5px;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+.small_img:hover .overlay{
+    height: 100%;
+    opacity: 1;
+}
+
+.small_img .overlay h3{
+    margin: 10% 0 30px;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 1.02px;
+}
+
+
+.small_img .overlay button{
+    width: 90px;
+    height: 30px;
+    background-color: seashell;
+    color: #313131;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+
+.small_img .overlay button:hover{
+    border: 2px solid skyblue;
+    color: #fff;
+    background-color: transparent;
+}
+
+
+/* Fresh Fruit section is end here */
+
+
+
+
+
+
+/* Customer section is start here */
+
+.customer_section{
+    width:90%;
+    height: 550px;
+    /* border: 1px solid #000; */
+    margin: 100px auto;
+    text-align: center;
+    padding: 35px;
+}
+
+.customer_section h2{
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 1.3px;
+    position: relative;
+}
+
+.customer_section h2::after{
+    content: "";
+    width:25%;
+    height: 2px;
+    background-color: #ccccccb6;
+    position: absolute;
+    top: 57%;
+    right: 8%;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #ccccccb6;
+}
+
+
+.customer_point{
+    width: 85%;
+    height: 80%;
+    /* border: 1px solid #000; */
+    margin: 50px auto;
+    padding: 25px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.left_Slide_Arrow, .right_Slide_Arrow{
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    background-color: #313131;
+    line-height: 40px;
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    top:33%;
+    cursor: pointer;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+
+.left_Slide_Arrow:hover, .right_Slide_Arrow:hover{
+    background-color: transparent !important;
+    border: 2px solid #313131;
+    color: #333232 !important;
+    transform: scale(1.02);
+}
+
+.customer_point .swiper-button-next:after,
+.customer_point .swiper-button-prev:after {
+    display: none;
+}
+
+.left_Slide_Arrow{
+    left: 20%;
+}
+
+.right_Slide_Arrow{
+    right: 20%;
+}
+
+.customer_wraper{
+    width:100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 5px;
+}
+
+
+.singel_customer{
+    min-width:100%;
+    height: auto;
+    margin: 10px auto;
+    padding: 15px;
+}
+
+
+.cutomer_img{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fcce72;
+    margin: 5px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+
+.cutomer_img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 4px #fed27c, 0 0 5px #fed27c,  0 0 6px #8b8371;
+}
+
+
+.cutomer_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.8);
+}
+
+
+.customer_details h4{
+    margin: 11px auto;
+    letter-spacing: 1.2px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+}
+
+.customer_details p{
+    color: rgb(78, 77, 77);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.customer_details p:nth-child(2){
+    margin: 2px 0 3px;
+    
+}
+
+.customer_details p:nth-child(2) i{
+    margin: 15px;
+    font-size: 21px;
+}
+
+/* Customer section is end here */
+
+
+
+
+
+/* Call Back section start Here */
+
+.calback_section{
+    width:95%;
+    height: 450px;
+    /* border: 1px solid #000; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: 0;
+   
+}
+
+.calback_section h2{
+    text-align: center;
+    margin: 25px;
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 1.2px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+.calback_section h2::before{
+    content: "";
+    width: 300px;
+    height: 2px;
+    background-color: #ccccccb6;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-430px);
+    border-radius: 5px;
+}
+
+
+.form_wraper{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content:right;
+    column-gap: 20px;
+}
+
+
+
+
+.form_div{
+    width:38%;
+    height: 350px;
+    /* border: 1px solid #000; */
+    padding: 10px;
+   
+}
+
+.form_div form{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    /* align-items: center; */
+    padding-top: 15px;
+}
+
+.form_div form input{
+    width: 94%;
+    height: 36px;
+    margin: 5px 0px 5px auto;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #aca9a9b4;
+    transition: all 0.3s;
+}
+
+.form_div form input:focus{
+    border: none;
+    border-bottom: 2px solid rgb(80, 233, 74);
+    outline: none;
+}
+
+
+.form_div form textarea{
+    width: 94%;
+    margin: 5px 0px 5px auto;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccccccb4;
+    transition: all 0.3s;
+}
+
+.form_div form textarea:focus{
+    outline: none;
+    border: none;
+    border: 1px solid rgb(80, 233, 74);
+}
+
+
+.form_div form button{
+    width: 100px;
+    height: 32px;
+    margin-left: calc(100% - 94%);
+    margin-top: 20px;
+    background-color: #f89e12;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.form_div form button:hover{
+    background-color: #313131;
+    box-shadow: 2px 2px 5px rgb(199, 243, 133),-2px -2px 5px rgb(199, 243, 133);
+    border: 1px solid greenyellow;
+    font-weight: 500;
+}
+
+
+.location_div{
+    width: 56%;
+    height: 310px;
+    border-radius: 5px;
+    margin-right: 9px;
+    /* border: 1px solid red; */
+}
+
+.location_div iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* Call Back section end Here */
+
+
+/* Footer section start Here */
+.footer_main {
+    width: 100%;
+    height: 350px;
+    background-color: rgb(46, 46, 46);
+    padding-top: 35px;
+  }
+
+.footer_main h2{
+    text-align: center;
+    font-size: 34px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_main .footer_wraper{
+    width: 85%;
+    height: 130px;
+    margin: 5px auto 30px;
+    /* border: 1px solid #f1eded; */
+}
+
+.footer_wraper .frist_div{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer_wraper .frist_div span{
+    /* border: 1px solid #ffff; */
+    width: calc(100% / 3);
+    height: 100%;
+    font-size: 14px;
+    padding-left: 10px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.footer_wraper .frist_div span i{
+    font-size: 20px;
+    color: #fff;
+    padding-right: 10px;
+}
+
+.footer_wraper .second_div{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.footer_wraper .second_div .input_filed{
+    flex: 1;
+    height: 100%;
+    /* border: 1px solid #ffff; */
+}
+.footer_wraper .second_div .input_filed input{
+    width: 70%;
+    height: 100%;
+    padding-left: 10px;
+    margin-right: 0;
+    border: none;
+    outline:none;
+    background-color: #fff;
+    color: #212121;
+    font-size: 15px;
+
+}
+
+.footer_wraper .second_div .input_filed button{
+    width: 28%;
+    height: 100%;
+    border: none;
+    outline:none;
+    background-color: #f89e12;
+    margin-left: -4px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.footer_wraper .second_div .social_icon{
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+}
+
+.footer_wraper .second_div .social_icon span{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+    color:var(--clr);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.footer_wraper .second_div .social_icon span:hover{
+    background-color:var(--clr);
+    color:#fff;
+}
+
+.copyRight{
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    border-bottom: 4px solid #96f718;
+
+}
+/* Footer section end Here */
+
+
+
+
+
+@media screen and (max-width:920px) {
+    .banner{
+        width:100%;
+        height: 30vh;
+    }
+    .menu_Bar{
+        width:90%;
+        height: 10vh;
+        position: absolute;
+        top: 25vh;
+        left: 50%;
+        transform: translateX(-50%);
+       
+    }
+
+    .menu_Bar ul li a{
+        font-weight:500;
+        letter-spacing: 0.6px;
+        font-size:14px;
+        
+    }
+
+
+
+
+    /* About section start here */
+
+    .about_Fruits_Shop{
+        width:95%;
+        height: 400px;
+        /* border: 1px solid #000; */
+        margin: 70px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .about_img{
+        width: 54%;
+        height: 100%;
+        border-radius: 3px;
+        background-color: #cccccc7c;
+        position: relative;
+    }
+
+    .about_details{
+        width: 40%;
+        height: 100%;
+        margin-left: 4%;
+        padding-left: 6px;
+        padding-right: 6px;
+        line-height: 22px;
+    
+    }
+
+    .about_details h2::before{
+    display: none;
+
+    }
+    /* About section end here */
+
+
+    /* Fresh Fruit section is start here */
+
+
+    .fresh_fruit h2{  
+        margin: 25px 0 25px 165px;
+    }
+
+    .fresh_fruit h2::before{
+        content: "";
+        width: 150px;
+        height: 2px;
+        background-color: #ccccccb6;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left:-165px;
+       
+    }
+    
+
+    .img_Conteiner{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(3, 350px);
+        grid-gap: 20px 20px;
+    }
+    
+    /* Fresh Fruit section is end here */
+
+    .customer_section h2::after {
+        content: "";
+        width: 25%;
+        height: 2px;
+        background-color: #ccccccb6;
+        position: absolute;
+        top: 57%;
+        right: -2%;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px #ccccccb6;
+    }
+
+    /* Call back section start here */
+    
+    
+    .calback_section h2::before{
+        content: "";
+        width: 200px;
+        height: 2px;
+        background-color: #ccccccb6;
+        position: absolute;
+        top:50%;
+        left: 33%;
+        transform: translateX(-220px);
+        border-radius: 5px;
+    }
+
+    .form_div{
+        width:44%;
+        height: 350px;
+        padding: 10px;
+        
+    }
+    .location_div{
+        width: 50%;
+        height: 310px;
+        border-radius: 5px;
+       
+    }
+
+    /* Call back section end here */
+
+}
+
+
+@media screen and (max-width:768px) {
+    .banner{
+        width:100%;
+        height: 23vh;
+    }
+    .mySwiper .swiper-button-prev{
+        margin-top: -5px !important;
+    } 
+
+    /* Upper Header start */
+    .top_header{
+        width: 100%;
+        height: 8vh;
+        background-color: #252525;
+        border: none;
+        border-radius: 2px 2px 0 0;
+        padding: 0px 10px;
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .top_header .shop_name h4{
+        color:#FF0060;
+        font-size: 26px;
+        letter-spacing: 1px;
+        margin-left: 10px;
+        font-family: 'Dancing Script', cursive;
+        
+    }
+    
+    .top_header .shop_name h4 i{
+        color: #E3F6FF;
+        margin: 0 2px;
+    }
+    
+    .top_header .shop_name h4 span{
+        color: #06e624;
+        padding-left: 2px;
+        font-family: 'Dancing Script', cursive;
+    }
+    
+    .top_header .icon_menu{
+        width: 60%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+       
+    }
+    
+    .top_header .icon_menu .topSearch_place{
+        width: 180px;
+        height: 28px;
+        margin-right: 15px;
+        background-color: #06e624;
+        border-radius: 5px;
+       
+    }
+    .top_header .icon_menu .topSearch_place input{
+        width: 150px;
+        height: 100%;
+        padding-left: 5px;
+        border: none;
+        outline: none;
+        border-radius: 5px 0 0 5px;
+       
+    }
+    
+    .topSearch_place span{
+        width: 30px;
+        height:100%;
+        font-size: 16px;
+        padding: 2px;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .top_header .icon_menu .menu_icon i{
+        font-size: 25px;
+        margin: 0px 5px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .top_header .icon_menu .menu_icon i:hover{
+        color: #0bf52a;
+        transform: scale(1.1);
+    }
+    /* Upper Header end */
+
+
+    /* Nav Bar is start here */
+    .menu_Bar{
+        max-width: 380px;
+        height: max-content;
+        min-height: 65vh;
+        border-radius: 0 5px 5px 0;
+        position: absolute;
+        top: 8.15vh;
+        left: -380px;
+        transition: box-shadow 0.3s, left 0.7s;
+        z-index: 100;
+        
+    }
+
+    .menu_Bar.menu_In{
+        left: 0px;
+    }
+
+    .menu_Bar:hover{
+        box-shadow: -2px 3px 5px #ccc, 0 0 12px #dbdbdb;
+    }
+
+    .menu_Bar p{
+        display: block;
+        text-align: right;
+        padding: 10px 12px 8px 0;
+        margin-right: -8.3px;
+        background: #04b81c;
+        border-top-right-radius: 5px;
+        border-bottom: 2.5px solid #b9f746ec;
+    }
+    .menu_Bar p i{
+        color: #ffffff;
+        font-size: 26px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .menu_Bar p i:hover{
+        color: rgb(241, 3, 190);
+        transform: scale(1.2);
+    }
+    .menu_Bar ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 15px;
+    } 
+
+    .menu_Bar ul li{
+        margin-left: calc(380px - 220px);
+        line-height: 8vh;
+    }
+
+    .menu_Bar ul li:nth-last-child(1){
+        display: none;
+    }
+    /* Nav Bar is end here */
+
+
+
+    
+    /* Frutis is stsrt here */
+
+    .fruits_point{
+        width: 400px;
+        /* height: 400px; */
+        margin: 6vh auto 10px;
+        
+    }
+
+    .fruits_point p b{
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .img_Box{
+        width: 330px;
+        height: 280px;
+    }
+
+    /* fruits_point end here */
+
+
+    /* About section start here */
+
+    .about_Fruits_Shop{
+        width:95%;
+        min-height: 400px;
+        height: 550px;
+        margin: 70px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; 
+        /* border: 1px solid #000; */
+        
+    }
+
+    .about_img{
+        width: 90%;
+        height: 100%;
+        border-radius: 3px;
+        background-color: #cccccc7c;
+        position: relative;
+        left: 3%;
+    }
+
+    .about_details{
+        width: 90%;
+        height: 100%;
+        line-height: 22px;
+        margin-left: 5%;
+        margin-top: -20px;
+        
+    }
+
+    /* About section end here */
+
+
+
+    /* Fresh Fruit section is start here */
+
+
+    .fresh_fruit h2{  
+        margin: 25px 0 25px 15px;
+    }
+
+    .fresh_fruit h2::before{
+        content: "";
+        width: 150px;
+        height: 2px;
+        background-color: #ccccccb6;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left:165px;
+       
+    }
+    
+
+    .img_Conteiner{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 94%;
+        grid-template-rows: repeat(6, 350px);
+        place-content: center;
+    }
+    
+    /* Fresh Fruit section is end here */
+
+
+
+    /* Customer review start*/
+    .customer_section{
+        width:96%;
+        height: 520px;
+        margin: 50px auto;
+        padding: 35px;
+    }
+
+    .customer_section h2{
+        width: 100%;
+        font-size: 32px;
+        font-weight: 500;
+        font-family: 'Roboto Slab', serif;
+        letter-spacing: 1.3px;
+        position: relative;
+    }
+    
+    .customer_section h2::after{
+        display: none;
+    }
+
+    .customer_point{
+        width: 96%;
+        height: 88%; 
+    }
+
+     /* Call back section start here */
+     .calback_section{
+        width:95%;
+        min-height: 480px;
+        height: auto;
+        /* border: 1px solid #000; */
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: 0;
+       
+    }
+     .form_wraper{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content:right;
+        column-gap: 20px;
+    }
+
+    .calback_section h2::before{
+        display: none;
+    }
+
+    .form_div{
+        width:98%;
+        height: 350px;
+        padding: 10px;
+        
+    }
+    .location_div{
+        width: 90%;
+        height: 230px;
+        border-radius: 5px;
+        margin: 5px auto;
+    }
+
+    /* Call back section start here */
+
+    /* footer sectionis start here */
+    .footer_wraper .frist_div{
+        width: 100%;
+        height: 55%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    .footer_wraper .frist_div span {
+        width: auto;
+        margin-bottom: 5px;
+    }
+
+    .footer_wraper .second_div{
+        width: 100%;
+        height:65%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+        
+    }
+
+    .footer_wraper .second_div .input_filed {
+        margin-bottom: 10px;
+    }
+
+    .footer_wraper .second_div .input_filed input{
+       height:30px;
+    }
+    .footer_wraper .second_div .input_filed button{
+        height:30px;
+        font-size: 12px;
+    }
+
+    .footer_wraper .second_div .social_icon{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left:0;
+    }
+
+    /* footer sectionis end here */
+
+
+}
+
+
+@media screen and (max-width:480px) {
+
+    .banner{
+        width:100;
+        height: 20vh;
+    }
+
+/* top header start here */
+    .top_header{
+        width: 100%;
+        height: 6.5vh;
+        padding: 0px 6px;
+    }
+    .top_header .shop_name h4{
+        font-size: 22px;
+        letter-spacing: 0.5px;
+        margin-left: 8px;
+        
+    }
+    .top_header .icon_menu{
+        width: 55%;
+        height: 100%;
+        padding-right: 5px;
+       
+    }
+
+    .top_header .icon_menu .topSearch_place{
+        width: 150px;
+        height: 28px;
+        margin-right: 10px;
+       
+    }
+    .top_header .icon_menu .topSearch_place input{
+        width: 130px;
+        height: 100%;
+        padding-left: 2px;
+        
+       
+    }
+    .topSearch_place span{
+        width: 20px;
+        font-size: 12px;
+        padding: 1px;
+       
+    }
+    .top_header .icon_menu .menu_icon i{
+        font-size: 20px;
+        margin: 0px 3px;
+        
+    }
+
+    /* Menu bar start */
+    .menu_Bar{
+        position: absolute;
+        top: 6.6vh;
+    }
+
+
+    /* Customer section here */
+    .customer_section{
+        width:98%;
+        height: 520px;
+        margin: 35px auto;
+        padding: 20px;
+    }
+    .customer_point{
+        width: 100%;
+        height: 88%; 
+    }
+    .customer_wraper{
+        padding: 10px;
+    }
+    .cutomer_img{
+        width: 70px;
+        height: 70px;
+        border: 2px solid #fcce72;
+        margin: 2px auto;
+       
+    }
+
+    /* .cutomer_img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.5);
+    } */
+    
+    
+    .customer_details h4{
+        margin: 5px auto;
+        letter-spacing: 1.2px;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Roboto Slab', serif;
+    }
+    
+    .customer_details p{
+        color: rgb(78, 77, 77);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    
+    .customer_details p:nth-child(2){
+        margin: 2px 0 2px;
+        
+    }
+
+    .left_Slide_Arrow, .right_Slide_Arrow{
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+     .customer_details p:nth-child(2) i{
+        margin: 13px;
+        font-size: 18px;
+    }
+}

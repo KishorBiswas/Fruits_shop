@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Page</title>
+    <link rel="stylesheet" href="./loginPage.css" />
+
+     <!-- font awesome CDN link -->
+     <script src="https://kit.fontawesome.com/dd14d179ff.js" crossorigin="anonymous"></script>
+
+
+     <!-- Googls Fonts Link here -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+     
+</head>
+<body>
+    <div class="loginContainer">
+       <div class="loginArea">
+            <div class="loginImg">
+                <p>Nice to see you again.</p>
+                <h2>Welcome Web Store.</h2>
+                <p>Ut sed ea gubergren et nonumy est, elitr kasd lorem. Et voluptua et justo tempor no lorem nonumy, amet aliquyam sadipscing eirmod ea duo, est kasd.</p>
+            </div>
+            <div class="conteanerForm">
+                <div class="loginFrom">
+                    <h3>Login Account</h3>
+
+                    <form>
+                        <div class="inputBox">
+                        
+                            <input type="email" placeholder="Enter gmail id.." required/>
+                            <label>User Name..</label>
+                        </div>
+                        <div class="inputBox">
+                            <i class="fa-solid fa-eye-slash eye_icon"></i>
+                            <input type="password" placeholder="Enter Password.." required/>
+                            <label>Password..</label>
+                        </div>
+
+                        <div class="singLink">
+                            <span>Don't have a account?</span>
+                            <a href="#" id="singUpLink">Sing In</a>
+                        </div>
+
+                        <div class="btnContainer">
+                            <button type="submit">Login</button>
+                            <a href="./index.html">Go to Home</a>
+                        </div>
+                        
+                    </form>
+                </div>
+
+
+
+
+                <!-- singUP form -->
+                <div class="singUPform">
+                    <h3>SignUp now..</h3>
+
+                    <form>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Enter Fullname.." required/>
+                            <label>Fullname..</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" placeholder="Enter gmail id.." required/>
+                            <label>Email Id..</label>
+                        </div>
+                        <div class="inputBox">
+                            <i class="fa-solid fa-eye-slash eye_icon"></i>
+                            <input type="password" placeholder="Set Password.." required/>
+                            <label>Password..</label>
+                        </div>
+
+                        <div class="singLink">
+                            <span>Allready have a account?</span>
+                            <a href="#" id="loginLink">LogIn</a>
+                        </div>
+
+                        <div class="btnContainer">
+                            <button type="submit">Register</button>
+                            <a href="./index.html">Go to Home</a>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+       </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        let input = document.querySelectorAll("input");
+        let inputBox = document.querySelector(".inputBox");
+
+        input.forEach((element) => {
+
+            let label = element.nextElementSibling;
+
+            element.addEventListener("change", (event) => {
+                event.preventDefault();
+
+                if(element.value !== ""){
+                    label.classList.add("labelValue");
+                    inputBox.classList.add("presentValue");
+                }else{
+                    label.classList.remove("labelValue");
+                    inputBox.classList.remove("presentValue");
+                }
+            });
+        })
+     
+        
+
+
+        // show and hide password text
+        let eyeIcon = document.querySelectorAll(".eye_icon");
+        
+
+        eyeIcon.forEach((icon) => {
+
+            let passwordInput = icon.nextElementSibling;
+
+            icon.addEventListener("click", (event) => {
+                if(passwordInput.value !== ""){
+
+                    if(icon.classList.contains("fa-eye-slash")){
+                        passwordInput.type = "text";
+                        icon.classList.replace("fa-eye-slash", "fa-eye");
+                    }else if(icon.classList.contains("fa-eye")){
+                        passwordInput.type = "password";
+                        icon.classList.replace( "fa-eye", "fa-eye-slash");
+                    }
+                    
+                } 
+
+            })
+        })
+
+        // console.log(eyeIcon)
+       
+       
+
+        // Change the singUp page and Login page visibility
+        let singUpLink = document.getElementById("singUpLink");
+        let loginLink = document.getElementById("loginLink");
+        let singUPform = document.querySelector(".singUPform");
+        let loginFrom = document.querySelector(".loginFrom");
+
+        singUpLink.addEventListener("click", (event) => {
+            singUPform.style.top = 0; 
+            loginFrom.style.bottom = -100 + "%";
+
+            
+        });
+
+        loginLink.addEventListener("click", (event) => {
+            singUPform.style.top = -100 + "%"; 
+            loginFrom.style.bottom = 0;
+
+        })
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.loginContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(45deg, #ecb754ab, #1af12c86);
+}
+
+.loginContainer .loginArea{
+    width: 60%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.loginContainer .loginArea .loginImg{
+    width: 52%;
+    height: 100%;
+    background-image: url(./Image/LoginImg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 5px 0 0 5px;
+    opacity: 0.9;
+
+}
+
+.loginImg p:nth-child(1){
+    color: #00ff00;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px #0805d3;
+}
+.loginImg h2{
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    text-shadow: 1px 1px #000007;
+    position: relative;
+}
+
+.loginImg h2::after{
+    content: "";
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+}
+
+.loginImg p:nth-last-child(1){
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 15px;
+    text-shadow: 0px 1px #080808;
+}
+.loginContainer .loginArea .conteanerForm {
+    width: 45%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.loginFrom{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    transition: bottom 0.5s;
+}
+
+h3{
+   text-align: center;
+   margin:70px 0 70px;
+   color: #0c55f3;
+   font-family: 'Roboto Slab', serif;
+   letter-spacing: 1.2px;
+   font-size: 20px;
+   position: relative;
+}
+
+
+form{
+    width: 80%;
+    height: 60%;
+    /* border: 1px solid #000;s */
+    margin: 5px auto;
+}
+
+form .inputBox{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #000; */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+form .inputBox input{
+    width: 100%;
+    height: 90%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #00ff00;
+    border-radius: 2px;
+    padding-left: 6px;
+    font-size: 15px;
+    background-color:transparent;
+    position: relative;
+    transition: border 0.3s;
+}
+
+form .inputBox .eye_icon{
+    font-size: 14px;
+    position: absolute;
+    top:12px;
+    right: 7.5px;
+    color: #212121;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+form .inputBox .eye_icon:hover{
+    transform: scale(1.1);
+    color: #0751f1e0;
+}
+
+form .inputBox label{
+    position: absolute;
+    top: 6px;
+    left: 6.5px;
+    color: #212121;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+
+.inputBox.presentValue input:not(:valid){
+    border-bottom:none;
+    border-left: 3px solid #fc1e0e;
+    background-color: rgba(233, 181, 38, 0.671);
+}
+
+form .inputBox input:valid,
+form .inputBox input:focus{
+    border-bottom:none;
+    border-left: 3px solid #00ff00;
+    background-color: rgba(250, 235, 215, 0.76);
+    padding-left: 5px;
+}
+
+/* .loginFrom form .inputBox input + label{
+    top: -22px;
+    left: 0px;
+    color: #212121;
+} */
+
+form .inputBox input:valid ~ label,
+form .inputBox input:focus ~ label{
+    top: -23px;
+    left: 0px;
+    color: #212121;
+}
+
+.labelValue{
+    top: -23px !important;
+    left: 0px !important;
+    color: #212121 !important;
+}
+
+form .inputBox input::placeholder{
+    opacity: 0;
+}
+
+form .inputBox input:focus::placeholder{
+    opacity: 1;
+}
+
+form .singLink{
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .singLink span{
+    color: #212121;
+    font-size: 14px;
+}
+form .singLink a{
+    text-decoration: none;
+    color: #0c55f3;
+    font: 16px;
+    letter-spacing: 1.2px;
+}
+
+form .btnContainer{
+    width: 100%;
+    height: 30px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+form .btnContainer button{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #fdfcfd;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(65deg, #30c930 , #2d30be);
+    transition: all 0.3s;
+}
+
+form .btnContainer a{
+    color: rgb(5, 128, 32);
+    font-size: 16px;
+}
+
+form button:hover{
+    background: linear-gradient(-95deg, #30c930 , #2d30be);
+}
+
+.singUPform{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: top 0.5s;
+}
+
+
+
+
+@media screen and (max-width: 920px) {
+    .loginContainer .loginArea{
+        width: 88%;
+        height: 530px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .loginContainer .loginArea .loginImg{
+        display: none;
+    }
+
+    .loginContainer .loginArea .conteanerForm {
+        width: 98%;
+    }
+}
