@@ -81,3 +81,26 @@ document.addEventListener("click", (event) => {
 
 
 
+// Scroll Top button start here
+let scrollTopBtn = document.getElementById('scrollTop');
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+});
+
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY >= 200){
+    scrollTopBtn.style.display = 'block';
+  }else{
+    scrollTopBtn.style.display = 'none';
+  }
+})
+
+
+// Scroll Top button end here
+
+
